@@ -1,3 +1,4 @@
+#include "LinkedList.h"
 #include <iostream>
 #include <string>
 
@@ -5,12 +6,13 @@ using std::cout, std::endl, std::string;
 
 int main() {
 
-  string name = "Corey Thompson";
-  string dob = "11/10/1995";
-  int hash = 1e4;
-  cout << name << " " << dob << endl;
-  cout << "hash #" << hash << endl;
+  LinkedList *myLinkedList = new LinkedList(1);
+  myLinkedList->append(2);
+  myLinkedList->append(3);
+  myLinkedList->append(4);
+  myLinkedList->deleteLast();
+  myLinkedList->append(5);
+  delete myLinkedList;
 
-  // Delete your information ^^
   return 0;
 }
